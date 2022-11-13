@@ -672,7 +672,7 @@ btnSubmit.addEventListener('click', () =>{
                 }
     
                 yellow.style.transform = `rotate(${resultantAngle}deg)`
-                resultante.innerText = resultant.toExponential(1);
+                resultante.innerText = resultant.toExponential(1)+"N";
             }
     
             if(q1Value > 0 && q2Value < 0){
@@ -735,7 +735,7 @@ btnSubmit.addEventListener('click', () =>{
                 }
     
                 yellow.style.transform = `rotate(${resultantAngle}deg)`
-                resultante.innerText = resultant.toExponential(1);
+                resultante.innerText = resultant.toExponential(1)+"N";
             }
     
             if(q1Value < 0 && q2Value > 0){
@@ -798,7 +798,7 @@ btnSubmit.addEventListener('click', () =>{
                 }
     
                 yellow.style.transform = `rotate(${resultantAngle}deg)`
-                resultante.innerText = resultant.toExponential(1);
+                resultante.innerText = resultant.toExponential(1)+"N";
             }
     
             if(q1Value && q2Value < 0){
@@ -861,7 +861,7 @@ btnSubmit.addEventListener('click', () =>{
                 }
     
                 yellow.style.transform = `rotate(${resultantAngle}deg)`
-                resultante.innerText = resultant.toExponential(1);
+                resultante.innerText = resultant.toExponential(1)+"N";
             }
         });
     });
