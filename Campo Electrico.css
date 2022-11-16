@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-color: steelblue;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+
+.ingCargas{
+    margin-left: 2%;
+    width: 20%;
+    height: 95vh;
+    box-shadow: 7px 10px 30px -1px black;
+}
+
+.inputs h1{
+    background: linear-gradient(
+        to right,
+        darkblue,
+        black,
+        darkblue
+    );
+    background-size: 200%;
+    animation: gradient 2s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.inputs{
+    text-align: center;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+input{
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #1c1c1c;
+    border-radius: 10px;
+    height: 3vh;
+    width: 4vh;
+}
+
+#btnSubmit{
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px;
+    margin-bottom: 0;
+    width: 10vh;
+    font-size: .83em;
+    background-color: lightseagreen;
+}
+
+.btnRestart{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: .83em;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: lightseagreen;
+    border: 2px solid #1d1919;
+    border-radius: 10px;
+    height: 3vh;
+    width: 10vh;
+}
+
+
+#btnSubmit:hover,.btnRestart:hover{
+    background-color: lightskyblue;
+}
+
+input:focus{
+    outline: 1px solid slateblue;
+}
+
+select{
+    cursor: pointer;
+    font-weight: bold;
+    appearance: none;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    height: 2.7vh;
+    width: 4vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+
+.grafica{
+    width: 90%;
+    height: 95vh;
+    background-color: rgb(11,15,16);
+    box-shadow: 7px 10px 30px -1px black;
+}
+
+.graficaTitulo{
+    display: flex;
+    border: 2px solid white;
+    width: 90%;
+    height: 95vh;
+}
+
+#x, #y{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    top: 50%;
+    right: 50%;
+    cursor: grab;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 100%;
+    background-color: yellowgreen;
+    width: 4vh;
+    height: 4vh;
+}
+
+
+
+#y{
+   background-color: darkblue; 
+   right: 70vh ;
+   top: 50%;
+}
+
+.rotate{
+    writing-mode: vertical-lr;
+}
+
+.rotate h1{
+    background: linear-gradient(
+        to right,
+        darkblue,
+        black,
+        darkblue
+    );
+    background-size: 200%;
+    animation: gradient 2s linear infinite;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    
+}
+
+@keyframes gradient{
+    from{
+        background-position: 0% center;
+    }
+    to{
+        background-position: -200% center;
+    }
+}
+
+.grafica > div {
+    float: left;
+    width: fit-content;
+    height: fit-content;
+}
+
+#signoX, #signoY{
+    font-size: 2em;
+    width: fit-content;
+    height: fit-content;
+    cursor: grab;
+}
+
+#green, #blue, #yellow, #canvaSensor{
+    position: absolute;
+    opacity: 0;
+}
+
+#resultante{
+    color: yellow;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+#sensor{
+    z-index: 5;
+    position: absolute;
+    min-width: 100px;
+    min-height: 100px;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+    top: 65%;
+    right: 38%;
+}
+
+form{
+    width: 10vh
+}
+
+.ajustes{
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 80%;
+    height: 38vh;
+    gap: 10px;
+}
+
+
+.checkbox-rect input[type="checkbox"] {
+    display: none;
+  }
+  .checkbox-rect input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px "Open Sans", Arial, sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  .checkbox-rect input[type="checkbox"]:hover + label:hover {
+    color: purple;
+  }
+  .checkbox-rect input[type="checkbox"]:hover + label:before {
+    background: rgba(0, 0, 139, 0.438);
+    box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+  }
+  .checkbox-rect input[type="checkbox"] + label:last-child {
+    margin-bottom: 0;
+  }
+  .checkbox-rect input[type="checkbox"] + label:before {
+    content: "";
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid #343a3f;
+    border-radius: 0.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+    transition: all 0.2s, background 0.2s ease-in-out;
+    background: #f3f3f3;
+  }
+  .checkbox-rect input[type="checkbox"]:checked + label:before {
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 0.2em;
+    border: 2px solid #fff;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background: darkblue;
+    box-shadow: 0 0 0 1px #000;
+  }
+
+.distancias{
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: darkblue;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: none;
+}
+
+.instrucciones{
+    font-weight: bold;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 8vh;
+    background-color: lightseagreen;
+}
+
+.instrucciones:hover{
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+
+.displayInstrucciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    top: 5%;
+    right: 5%;
+    border-radius: 10px;
+    color: black;
+    background-color: lightseagreen;
+    z-index: 10;
+    position: absolute;
+}
+
+.uil-times-circle{
+    color: orangered;
+    position: absolute;
+    top: .5%;
+    right: .5%;
+    font-size: 1.7em;
+}
+
+.uil-times-circle:hover{
+    color: brown;
+    cursor: pointer;
+}
+
+.article{
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    font-weight: bolder;
+}
+
+.article > h1{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        to right,
+        darkblue,
+        black,
+        darkblue
+    );
+    background-size: 200%;
+    animation: gradient 2s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.btnVolver{
+    position: absolute;
+    top: 1.5%;
+    left: 2.8%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: .83em;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: lightseagreen;
+    border: 2px solid #1d1919;
+    border-radius: 10px;
+    height: 2.5vh;
+    width: 6vh;
+}
+
+.btnVolver:hover{
+    background-color: lightblue;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="Campo Electrico.css">
+    <link rel="shortcut icon" href="atomo.png">
+    <script defer src="main.js"></script>
+    <title>Campo y cargas</title>
+</head>
+<body>
+
+    <div class="ingCargas">
+        
+        <div class="inputs">
+            <a href="index.html" class="btnVolver">Volver</a>
+            <h1>Ingrese las cargas</h1>
+            <div class="cargaCompleta">
+                <label style="color: yellowgreen; font-weight: bold;">q1: </label>
+                <input type="number" id="valor1">
+                <label>x 10</label>
+                <input type="number" id="potencia1">
+                <select id="prefijo1">
+                    <option value="1">C</option>
+                    <option value="2">mC</option>
+                    <option value="3">pC</option>
+                    <option value="4">nC</option>
+                </select>
+            </div>
+            
+            <div class="cargaCompleta">
+                <label style="color: darkblue; font-weight: bold;">q2: </label>
+                <input type="number" name="valor2" id="valor2">
+                <label>x 10</label>
+                <input type="number" id="potencia2">
+                <select id="prefijo2">
+                    <option value="1">C</option>
+                    <option value="2">mC</option>
+                    <option value="3">pC</option>
+                    <option value="4">nC</option>
+                </select>
+            </div>
+            <input type="button" value="Submit" id="btnSubmit">
+            <a href="Campo Electrico.html" class="btnRestart"><p>Restart</p></a>
+        </div>
+
+        <div class="ajustes" id="ajustes">
+            <h4 style="margin: 0;">Opciones:</h4>
+            <div class="checkbox-rect">
+                <input type="checkbox" id="checkbox-rect1 c1" name="check">
+                <label for="checkbox-rect1 c1">Distancias</label>
+            </div>
+
+            <div class="checkbox-rect">
+                <input type="checkbox" id="checkbox-rect1 c3" name="check">
+                <label for="checkbox-rect1 c3">Lineas de campo de q1</label>
+            </div>
+
+            <div class="checkbox-rect">
+                <input type="checkbox" id="checkbox-rect1 c4" name="check">
+                <label for="checkbox-rect1 c4">Lineas de campo de q2</label>
+            </div>
+
+
+            <div class="distancias" id="divDistancias">
+                <label id="lblDistancia1"></label>
+                <label id="lblDistancia2"></label>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="grafica" id="grafica">
+        <div id="arrows" class="arrows">
+
+        </div>
+        <div id="x"><label id="signoX"></label></div>
+        <div id="y"><label id="signoY"></label></div>
+        <div class="sensor" id="sensor">
+            <label id="resultante"></label>
+            <canvas id="canvaSensor" width="100" height="100"></canvas>
+            <canvas id="green" width="100" height="100"></canvas>
+            <canvas id="blue" width="100" height="100"></canvas>
+            <canvas id="yellow" width="100" height="100"></canvas>
+        </div>
+        
+    </div>
+
+    <div class="rotate">
+        <h1>Campos y Cargas</h1>
+    </div>
+
+
+    <input type="button" class="instrucciones" id="btnInstrucciones" value="Ayuda">
+    <div class="displayInstrucciones" id="displayInstrucciones">
+        <i class="uil uil-times-circle" id="btnCloseWindow"></i>
+
+        <div class="article">
+            <h1>Instrucciones de uso</h1>
+            <p>1) Ingrese los valores de las cargas y presione el boton "Submit".</p>
+            <p>2) Arrastre las cargas con el mouse.</p>
+            <p>3) Mueva el sensor para visualizar el valor del campo resultante en cualquier punto en el espacio.</p>
+            <p>4) Puede agregar en las opciones las distancias entre las cargas y el sensor, y las lines de campo generadas por q1 y por q2.</p>
+            <p>5) Para generar el campo electrico con otros valores para las cargas, utilize el boton "Restart" e ingrese los nuevos valores.</p>
+        </div>
+    </div>
+</body>
+</html>
